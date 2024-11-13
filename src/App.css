@@ -1,38 +1,277 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.navigation {
+    display: flex;
   align-items: center;
+  justify-content: space-between;
+    background: rgb(34, 34, 34);
+  max-height: 75px;
+  color: blanchedalmond;
+   padding: 8px;
+}
+
+
+.navigation svg {
+  cursor: pointer;
+}
+.navigation svg:hover {
+   transform: scale(1.05);
+   
+   
+}
+.my-svg:hover {
+  fill: #F16D7F; 
+}
+
+
+.header__nav__div2 {
+    display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 33px;
+}
+.main {
+background: rgb(241, 228, 230);
+
+
+}
+.colored-side {
+  padding: 2px 1px 3px 12px;
+  border-left: 12px solid rgb(241, 109, 127);
+
+}
+.mainContent {
+  font-family: Lato;
+  display: flex;
+  align-items: center;
+  text-align: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.mainContent img {
+  height: 726px;
+}
+.fashion {
+  color: rgb(241, 109, 127);
 }
 
-.App-link {
-  color: #61dafb;
+
+.top-head {
+    background-color: #F8F3F4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 96px;
+}
+.top-head__heading {
+    color: rgb(241, 109, 127);
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.productDescription {
+   padding: 22px;
+   display: flex;
+   flex-direction: column;
+ flex-wrap: wrap;
+   gap: 42px;
+}
+.purchasesCardProduct {
+
+    background: rgb(255, 255, 255);
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.09);
+margin-bottom: 20px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.purchasesCardProduct img{
+  width:40%;
+}
+.descCart{
+  padding: 70px 30px;
+}
+.productDescriptionText {
+    color:rgb(34, 34, 34);
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        font-family: Lato;
+}
+.delete-icon {
+  float: right;
+  margin-left: 90px;
+  margin-top: 35px;
+  color: black;
+  cursor: pointer;
+  transform: scale(2);
+}
+.delete-icon:hover {
+  opacity: 0.5;
+}
+.purchasesCard {
+flex-direction: column;
+    display: flex;
+      gap: 20px;
+     align-content: stretch;
+    align-items: center;
+    width: 500px;
+}
+.quantityCart{
+  width: 30px;
+}
+.shippingAdress {
+    display: flex;
+      color: rgb(164, 164, 164);
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0%;
+}
+input[type="text"] {
+    padding: 10px;
+    color: rgb(177, 177, 177);
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+width: 360px;
+border: 1px solid rgb(164, 164, 164);
+}
+input[type="submit"] {
+    border: 1px solid rgb(164, 164, 164);
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 255, 255);
+    
+}
+input[value="GET A QUOTE"] {
+    color: rgb(164, 164, 164);
+        font-family: Lato;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 13px;
+        letter-spacing: 0%;
+}
+.button {
+padding: 5px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        letter-spacing: 0%;
+}
+.button:hover {
+
+     
+            background: rgba(0, 0, 0, 0);
+            color: rgb(248, 10, 10);
+            box-shadow: inset 0 0 0 3px rgb(241, 109, 127);
+        
+}
+.products {
+ 
+  display: flex;
+
+}
+.notification {
+  position: absolute;
+     background: rgb(209, 250, 209);
+  width: 250px;
+  height: 30px;
+    color: rgb(76, 75, 75); 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+     transition: transform 500ms ease;
+       font-weight: 600;
+         z-index: 9999;
+  overflow: auto;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.item {
+  width: 30%;
+  margin-bottom: 50px;
+  background: #f5f5f5;
+  overflow: hidden;
+   
 }
+.item img{
+  width: 100%;
+  transition: transform 500ms ease;
+
+}
+.item img:hover{
+  transform: scale(1.05);
+}
+.itemdesc{
+  padding: 20px;
+}
+.catalog{
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item button {
+left: 150px;
+
+}
+button {
+  padding: 14px 38px 14px 38px;
+  border: 1px solid rgb(255, 106, 106);
+  color: rgb(242, 99, 118);
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+text-align: left;
+cursor: pointer;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60.5px;
+  transition: all 0.3s;
+}
+.image-container {
+    position: relative; 
+  }
+
+
+
+.button {
+    position: absolute; 
+    bottom: 150px; 
+    background-color: rgb(255, 106, 106);
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .button {
+    opacity: 1; 
+}
+
